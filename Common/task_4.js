@@ -1,16 +1,14 @@
 // #4 Фильтрация массива
 let arrayNumbers = [7, 18, 21, 4, 98, 1022];
-let result4 = [];
+let result = [];
 
 function even(figure) {
-  var result3 = figure % 2;
-  return result3 == 0;
-}
-
-for (let i = 0; i < arrayNumbers.length; i++) {
-  if (even(arrayNumbers[i])) {
-    result4.push(arrayNumbers[i]);
+  for (let i = 0; i < figure.length; i++) {
+    if (figure[i] % 2 == 0) {
+      result.push(figure[i]);
+    }
   }
+  return result;
 }
 
-console.log(result4);
+console.log(even(arrayNumbers));
