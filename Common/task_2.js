@@ -1,22 +1,25 @@
 // #2 Выборка объекта
 const workers = [
-	{"name":"Андрей", "salary":"890"},
-	{"name":"Марина", "salary":"1000"},
-	{"name":"Сергей", "salary":"2150"},
-	{"name":"Алеся", "salary":"1270"},
-	{"name":"Юлия", "salary":"670"},
-	{"name":"Виктор", "salary":"999"},
-	{"name":"Семен", "salary":"1970"}
-]
+  { name: "Андрей", salary: "890" },
+  { name: "Марина", salary: "1000" },
+  { name: "Сергей", salary: "2150" },
+  { name: "Алеся", salary: "1270" },
+  { name: "Юлия", salary: "670" },
+  { name: "Виктор", salary: "999" },
+  { name: "Семен", salary: "1970" },
+];
 
-let result2 = [];
+let wages = 1000;
+let result = [];
 
-function win (a) {
-	for (let i = 0; i < workers.length; i++) {
-		if (workers[i].salary >= a) {
-			console.log(workers[i].name);
-		}
-	}
+function array(list) {
+  for (let i = 0; i < list.length; i++) {
+    if (list[i].salary >= wages) {
+      let employee = list[i].name;
+      result.push(employee);
+    }
+  }
+  return result;
 }
 
-win(1000);
+console.log(array(workers));
